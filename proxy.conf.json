@@ -1,0 +1,9 @@
+{
+	"/api": {
+		"target": "http://crystal.westeurope.cloudapp.azure.com:57002/WorkstepController.Management.asmx",
+		"secure": false,
+		"pathRewrite": {
+			"^/api": ""
+		}
+	}
+}
