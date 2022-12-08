@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	background-color: #00356b;
+}
+
 li {
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: white !important;
+}
+
+#sidebar {
+	color: white;
+	height: 100vh;
+	max-width: 300px;
+}
+
+.container-pdf {
+	background-color: white;
+	height: 96vh;
 }

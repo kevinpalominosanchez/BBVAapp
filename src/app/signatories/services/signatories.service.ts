@@ -35,35 +35,21 @@ export class SignatoriesService {
 			cdataKey: "cdata",
 		};
 
-		// esta funcion no hace nada aca, para que funcione se debe dar click 2 veces al boton
-		// xmlHttp.onreadystatechange = () => {
-		// 	if (xmlHttp.readyState == 4) {
-		// 		if (xmlHttp.status == 200) {
-		// 			const xml = xmlHttp.responseText;
-		// 			this.xmlResult = this.ngxXmlToJsonService.xmlToJson(
-		// 				xml,
-		// 				options
-		// 			);
-		// 		}
-		// 	}
-		// };
-
 		xmlHttp.setRequestHeader("Content-Type", "text/xml");
 		xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
 
-		// esta funcion de ejecuta una vez el endpoint devuelva algo 
 		xmlHttp.onload = () => {
 			if (xmlHttp.readyState == 4) {
 				if (xmlHttp.status == 200) {
-					let resp = this.htmlEntities(xmlHttp.response)
+					let resp = this.htmlEntities(xmlHttp.response);
 					this.xmlResult = this.ngxXmlToJsonService.xmlToJson(
 						resp,
 						options
 					);
-					console.log("this.xmlResult: ",this.xmlResult);
+					console.log("this.xmlResult: ", this.xmlResult);
 				}
 			}
-		}
+		};
 
 		xmlHttp.send(body);
 
@@ -71,7 +57,6 @@ export class SignatoriesService {
 	}
 
 	htmlEntities(str: any) {
-		return String(str).replaceAll('&lt;', '<')
-						  .replaceAll('&gt;', '>');
+		return String(str).replaceAll("&lt;", "<").replaceAll("&gt;", ">");
 	}
 }
