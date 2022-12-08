@@ -5,6 +5,8 @@ body {
 
 li {
 	cursor: pointer;
+	list-style: none;
+	padding: 10px;
 }
 
 a {
@@ -21,4 +23,8 @@ a {
 .container-pdf {
 	background-color: white;
 	height: 96vh;
+}
+
+.active {
+	color: orange !important;
 }

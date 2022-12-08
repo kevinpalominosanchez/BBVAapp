@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { HomeModule } from "./home/home.module";
 import { SharedModule } from "./shared/shared.module";
 import { SignatoriesModule } from "./signatories/signatories.module";
 
@@ -15,6 +16,7 @@ import { SignatoriesModule } from "./signatories/signatories.module";
 		AppRoutingModule,
 		SharedModule,
 		SignatoriesModule,
+		HomeModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

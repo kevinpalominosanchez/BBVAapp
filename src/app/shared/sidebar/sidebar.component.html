@@ -1,14 +1,16 @@
 <div class="d-flex justify-content-between flex-column p-3" id="sidebar">
 	<div class="d-flex flex-column mt-5">
-		<div class="mb-3">
-			<a href="#">Alfredo Jimenez de Rios</a>
-		</div>
-		<div class="mb-3">
-			<a href="#">Rosalia Magdaleno Garcia</a>
-		</div>
-		<div class="mb-3">
-			<a href="#">Maritea Palacios Sancho</a>
-		</div>
+		<ul>
+			<li [routerLink]="['/signer', 1]" routerLinkActive="active">
+				Alfredo Jimenez de Rios
+			</li>
+			<li [routerLink]="['/signer', 2]" routerLinkActive="active">
+				Rosalia Magdaleno Garcia
+			</li>
+			<li [routerLink]="['/signer', 3]" routerLinkActive="active">
+				Maritea Palacios Sancho
+			</li>
+		</ul>
 	</div>
 
 	<div class="d-flex flex-column">
